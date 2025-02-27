@@ -7,6 +7,7 @@ public class Main {
             System.out.println(year + " год - не високосный год");
         }
     }
+
     public static void checkPhone(char clientOS, int clientDeviceYear) {
         if (clientOS == '1' && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию Android по ссылке");
@@ -36,7 +37,7 @@ public class Main {
             return days;
         }
         System.out.println("Потребуется дней " + days);
-         return days;
+        return days;
     }
 
     public static void main(String[] args) {
