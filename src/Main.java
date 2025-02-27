@@ -22,16 +22,21 @@ public class Main {
         }
     }
 
-    public static void checkDeliveryCard(int deliveryDistance) {
-        if (deliveryDistance < 20)
-            System.out.println("Потребуется дней 1");
-        else if (deliveryDistance <= 60)
-            System.out.println("Потребуется дней 2");
-        else if (deliveryDistance <= 100)
-            System.out.println("Потребуется дней 3");
-        else if (deliveryDistance > 100) {
+    public static int checkDeliveryCard(int deliveryDistance) {
+        int days;
+        if (deliveryDistance < 20) {
+            days = 1;
+        } else if (deliveryDistance <= 60) {
+            days = 2;
+        } else if (deliveryDistance <= 100) {
+            days = 3;
+        } else {
+            days = 0;
             System.out.println("Доставки нет");
+            return days;
         }
+        System.out.println("Потребуется дней " + days);
+         return days;
     }
 
     public static void main(String[] args) {
